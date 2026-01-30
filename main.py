@@ -1,10 +1,12 @@
 from customtkinter import *
+from tkinter import messagebox
 import json
 from textdistance import damerau_levenshtein
 from random import choice, sample, randint
 
 class Deck:
     def __init__(self, cards):
+        print(cards, '\n\n')
         self.questions = cards["Questions"]
         self.name = cards["Name"]
 
@@ -13,6 +15,7 @@ class System(CTk):
     def __init__(self, title, decks):
         super().__init__()
 
+        self._file = decks
         self._decks = self._read_decks(decks)
         self._current_deck = None
 
@@ -29,20 +32,38 @@ class System(CTk):
         self.title(title)
         self.geometry("750x600")
         self._screen = []
-        
+
+        self.protocol("WM_DELETE_WINDOW", self._quit)
+
         self._frame = CTkFrame(self)
         self._frame.grid(row=0, column=0, pady=20, padx=20, ipadx=50, ipady=5)
 
         self._settings = CTkFrame(self)
-        self._settings.grid(row=3, column=0, pady=20, padx=20)
+        self._settings.grid(row=1, column=0, pady=20, padx=20)
+        start = CTkButton(self._settings, text="Home", command=self._start_screen, font=("Arial", 16))
+        start.grid(row=0, column=0, pady=10, padx=10, ipadx=15, ipady=5)
         button = CTkButton(self._settings, text="Settings", command=self._settings_screen, font=("Arial", 16))
-        button.pack(pady=10, padx=10, ipadx=15, ipady=5)
+        button.grid(row=0, column=1, pady=10, padx=10, ipadx=15, ipady=5)
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         set_default_color_theme("dark-blue")
 
         self._start_screen()
+
+    def _quit(self):
+        save = []
+        for i, d in enumerate(self._decks):
+            save.append({})
+            save[i].update({"Name": d.name})
+            save[i].update({"Questions": d.questions})
+        
+        if messagebox.askokcancel("Quit", "Do you want to save before you quit?"):
+            with open(self._file, 'w') as file:
+                json.dump(save, file, indent=4, default=lambda x: list(x) if isinstance(x, tuple) else str(x))
+            self.destroy()
+        else:
+            self.destroy()
 
     def _read_decks(self, name):
         ds = []
@@ -149,7 +170,7 @@ class System(CTk):
     def _add_answer(self):
         self._currentQ["options"].append(self._answer.get())
         if self._accept_typos:
-            self._freq += 1
+            self._currentQ["STH"] += 1
         self._next_question()
     
     def _remove_answer(self):
@@ -159,14 +180,14 @@ class System(CTk):
     def _settings_screen(self, value=None):
         self._clear_screen()
         self._make_label("Settings", fontsize=24, pady=5)
-
-        self._make_check("Accept spelling errors?", var=self._accept_typos, anchor='w')
         
-        self._make_label("How often do you want to be prompted for alternative answers?", pady=2, padx=35, anchor='w')
+        self._make_label("How often do you want to be prompted for alternative answers?", pady=2, padx=45, anchor='w')
         self._make_seg_button(["Always", "Sometimes", "Never"], self._level, anchor='w', pady=5, command=self._settings_screen)
         if self._level.get() == "Sometimes":
-            self._make_label("How frequent?", pady=2, padx=35, anchor='w')
+            self._make_label("How frequent?", pady=2, padx=45, anchor='w')
             self._make_slider(self._freq, anchor='w')
+
+        self._make_check("Accept spelling errors?", var=self._accept_typos, anchor='w')
 
         self._make_button("Return", self._start_screen if self._current_deck is None else self._next_question)
 

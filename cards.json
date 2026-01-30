@@ -1,134 +1,336 @@
-[{
-  "Name": "Trivia",
-  "Questions": [{
-    "question": "What is the capital of France?",
-    "total": 0,
-    "correct": 0,
-    "STH": 1,
-    "options": ["Paris"],
-    "removed": [],
-    "answer": "Paris"
-  },
-  {
-    "question": "What is the largest planet in our solar system?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Jupiter"],
-    "removed": [],
-    "answer": "Jupiter"
-  },
-  {
-    "question": "Which country won the FIFA World Cup in 2018?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["France"],
-    "removed": [],
-    "answer": "France"
-  },
-  {
-    "question": "What is the tallest mountain in the world?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Mount Everest", "Everest"],
-    "removed": [],
-    "answer": "Mount Everest"
-  },
-  {
-    "question": "Which is the largest ocean on Earth?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Pacific Ocean", "Pacific"],
-    "removed": [],
-    "answer": "Pacific Ocean"
-  },
-  {
-    "question": "What is the chemical symbol for gold?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Au"],
-    "removed": [],
-    "answer": "Au"
-  },
-  {
-    "question": "Who painted the Mona Lisa?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Leonardo da Vinci", "DaVinci"],
-    "removed": [],
-    "answer": "Leonardo da Vinci"
-  },
-  {
-    "question": "Which planet is known as the Red Planet?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Mars"],
-    "removed": [],
-    "answer": "Mars"
-  },
-  {
-    "question": "What is the largest species of shark?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Whale Shark", "Whale"],
-    "removed": [],
-    "answer": "Whale Shark"
-  },
-  {
-    "question": "Which animal is known as the King of the Jungle?",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Lion"],
-    "removed": [],
-    "answer": "Lion"
-  }
-]
-},{
-  "Name": "Swahili",
-  "Questions": [{
-    "question": "Tumaini",
-    "total": 0,
-    "correct": 0,
-    "STH": 1,
-    "options": ["Hope"],
-    "removed": [],
-    "answer": "Hope"
-  },
-  {
-    "question": "Bibi",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Grandmother", "Oma"],
-    "removed": [],
-    "answer": "Grandmother"
-  },
-  {
-    "question": "Chama",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Society"],
-    "removed": [],
-    "answer": "Society"
-  },
-  {
-    "question": "Lango",
-    "STH": 1,
-    "total": 0,
-    "correct": 0,
-    "options": ["Door"],
-    "removed": [],
-    "answer": "Door"
-  }
-  ]
-}
+[
+    {
+        "Name": "Trivia",
+        "Questions": [
+            {
+                "question": "What is the capital of France?",
+                "total": 0,
+                "correct": 0,
+                "STH": 1,
+                "options": [
+                    "Paris"
+                ],
+                "removed": [],
+                "answer": "Paris"
+            },
+            {
+                "question": "What is the largest planet in our solar system?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Jupiter"
+                ],
+                "removed": [],
+                "answer": "Jupiter"
+            },
+            {
+                "question": "Which country won the FIFA World Cup in 2018?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "France"
+                ],
+                "removed": [],
+                "answer": "France"
+            },
+            {
+                "question": "What is the tallest mountain in the world?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Mount Everest",
+                    "Everest"
+                ],
+                "removed": [],
+                "answer": "Mount Everest"
+            },
+            {
+                "question": "Which is the largest ocean on Earth?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Pacific Ocean",
+                    "Pacific"
+                ],
+                "removed": [],
+                "answer": "Pacific Ocean"
+            },
+            {
+                "question": "What is the chemical symbol for gold?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Au"
+                ],
+                "removed": [],
+                "answer": "Au"
+            },
+            {
+                "question": "Who painted the Mona Lisa?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Leonardo da Vinci",
+                    "DaVinci"
+                ],
+                "removed": [],
+                "answer": "Leonardo da Vinci"
+            },
+            {
+                "question": "Which planet is known as the Red Planet?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Mars"
+                ],
+                "removed": [],
+                "answer": "Mars"
+            },
+            {
+                "question": "What is the largest species of shark?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Whale Shark",
+                    "Whale"
+                ],
+                "removed": [],
+                "answer": "Whale Shark"
+            },
+            {
+                "question": "Which animal is known as the King of the Jungle?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Lion"
+                ],
+                "removed": [],
+                "answer": "Lion"
+            },
+            {
+                "question": "What does ToM stand for?",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Theory of Mind"
+                ],
+                "removed": [],
+                "answer": "Theory of Mind"
+            }
+        ]
+    },
+    {
+        "Name": "Swahili",
+        "Questions": [
+            {
+                "question": "Tumaini",
+                "total": 0,
+                "correct": 0,
+                "STH": 1,
+                "options": [
+                    "Hope"
+                ],
+                "removed": [],
+                "answer": "Hope"
+            },
+            {
+                "question": "Bibi",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Grandmother",
+                    "Oma"
+                ],
+                "removed": [],
+                "answer": "Grandmother"
+            },
+            {
+                "question": "Chama",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Society"
+                ],
+                "removed": [],
+                "answer": "Society"
+            },
+            {
+                "question": "Lango",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Door"
+                ],
+                "removed": [],
+                "answer": "Door"
+            },
+            {
+                "question": "Karamu",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Party"
+                ],
+                "removed": [],
+                "answer": "Party"
+            },
+            {
+                "question": "Roho",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Soul"
+                ],
+                "removed": [],
+                "answer": "Soul"
+            },
+            {
+                "question": "Kanisa",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Church"
+                ],
+                "removed": [],
+                "answer": "Church"
+            },
+            {
+                "question": "Anga",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Sky"
+                ],
+                "removed": [],
+                "answer": "Sky"
+            },
+            {
+                "question": "Skati",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Skirt"
+                ],
+                "removed": [],
+                "answer": "Skirt"
+            },
+            {
+                "question": "Kijana",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Boy"
+                ],
+                "removed": [],
+                "answer": "Boy"
+            },
+            {
+                "question": "Maslahi",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Interest"
+                ],
+                "removed": [],
+                "answer": "Interest"
+            },
+            {
+                "question": "Siri",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Secret"
+                ],
+                "removed": [],
+                "answer": "Secret"
+            },
+            {
+                "question": "Dhoruba",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Storm"
+                ],
+                "removed": [],
+                "answer": "Storm"
+            },
+            {
+                "question": "Adhama",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Honor"
+                ],
+                "removed": [],
+                "answer": "Honor"
+            },
+            {
+                "question": "Kitanda",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Bed"
+                ],
+                "removed": [],
+                "answer": "Bed"
+            },
+            {
+                "question": "Tabibu",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Doctor"
+                ],
+                "removed": [],
+                "answer": "Doctor"
+            },
+            {
+                "question": "Kichwa",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Head"
+                ],
+                "removed": [],
+                "answer": "Head"
+            },
+            {
+                "question": "Wimbo",
+                "STH": 1,
+                "total": 0,
+                "correct": 0,
+                "options": [
+                    "Song"
+                ],
+                "removed": [],
+                "answer": "Song"
+            }
+        ]
+    }
 ]
