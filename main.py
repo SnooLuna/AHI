@@ -142,7 +142,7 @@ class System(CTk):
 
     def _next_question(self, event=None):
         self._answer = StringVar()           # reset the answer variable
-        self._currentQ = choices(self._current_deck.questions, weights=[1 - (q['correct'] / q['total']) if q['total'] > 0 else 1 for q in self._current_deck.questions])[0]
+        self._currentQ = choices(self._current_deck.questions, weights=[1.5 - (q['correct'] / q['total']) if q['total'] > 0 else 1.5 for q in self._current_deck.questions])[0]
         self._display(self._currentQ)        # Display the chosen question to the user
 
     def _display(self, question):
