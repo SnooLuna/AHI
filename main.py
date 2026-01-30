@@ -2,7 +2,7 @@ from customtkinter import *
 from tkinter import messagebox
 import json
 from textdistance import damerau_levenshtein
-from random import choice, sample, randint
+from random import randint, choices
 
 class Deck:
     def __init__(self, cards):
@@ -14,6 +14,7 @@ class Deck:
 class System(CTk):
     def __init__(self, title, decks):
         super().__init__()
+        set_default_color_theme("green")
 
         self._file = decks
         self._decks = self._read_decks(decks)
@@ -47,7 +48,6 @@ class System(CTk):
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
-        set_default_color_theme("dark-blue")
 
         self._start_screen()
 
@@ -58,11 +58,12 @@ class System(CTk):
             save[i].update({"Name": d.name})
             save[i].update({"Questions": d.questions})
         
-        if messagebox.askokcancel("Quit", "Do you want to save before you quit?"):
+        prompt = messagebox.askyesnocancel("Quit", "Do you want to save before you quit?")
+        if prompt:
             with open(self._file, 'w') as file:
                 json.dump(save, file, indent=4, default=lambda x: list(x) if isinstance(x, tuple) else str(x))
             self.destroy()
-        else:
+        elif prompt != None:
             self.destroy()
 
     def _read_decks(self, name):
@@ -141,9 +142,8 @@ class System(CTk):
 
     def _next_question(self, event=None):
         self._answer = StringVar()           # reset the answer variable
-        self._currentQ = choice(self._current_deck.questions)
+        self._currentQ = choices(self._current_deck.questions, weights=[1 - (q['correct'] / q['total']) if q['total'] > 0 else 1 for q in self._current_deck.questions])[0]
         self._display(self._currentQ)        # Display the chosen question to the user
-
 
     def _display(self, question):
         self._clear_screen()                 # clear anything previously on screen
@@ -179,10 +179,10 @@ class System(CTk):
 
     def _settings_screen(self, value=None):
         self._clear_screen()
-        self._make_label("Settings", fontsize=24, pady=5)
+        self._make_label("Settings", fontsize=24, pady=25)
         
         self._make_label("How often do you want to be prompted for alternative answers?", pady=2, padx=45, anchor='w')
-        self._make_seg_button(["Always", "Sometimes", "Never"], self._level, anchor='w', pady=5, command=self._settings_screen)
+        self._make_seg_button(["Never", "Sometimes", "Always"], self._level, anchor='w', pady=5, command=self._settings_screen)
         if self._level.get() == "Sometimes":
             self._make_label("How frequent?", pady=2, padx=45, anchor='w')
             self._make_slider(self._freq, anchor='w')
