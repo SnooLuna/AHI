@@ -1,69 +1,134 @@
-{
-  "Name": "MyDeck",
+[{
+  "Name": "Trivia",
   "Questions": [{
     "question": "What is the capital of France?",
-    "options": ["Paris", "London", "Berlin", "Madrid"],
+    "total": 0,
+    "correct": 0,
+    "STH": 1,
+    "options": ["Paris"],
+    "removed": [],
     "answer": "Paris"
   },
   {
     "question": "What is the largest planet in our solar system?",
-    "options": ["Mars", "Saturn", "Jupiter", "Neptune"],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Jupiter"],
+    "removed": [],
     "answer": "Jupiter"
   },
   {
     "question": "Which country won the FIFA World Cup in 2018?",
-    "options": ["Brazil", "Germany", "France", "Argentina"],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["France"],
+    "removed": [],
     "answer": "France"
   },
   {
     "question": "What is the tallest mountain in the world?",
-    "options": ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Mount Everest", "Everest"],
+    "removed": [],
     "answer": "Mount Everest"
   },
   {
     "question": "Which is the largest ocean on Earth?",
-    "options": [
-      "Pacific Ocean",
-      "Indian Ocean",
-      "Atlantic Ocean",
-      "Arctic Ocean"
-    ],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Pacific Ocean", "Pacific"],
+    "removed": [],
     "answer": "Pacific Ocean"
   },
   {
     "question": "What is the chemical symbol for gold?",
-    "options": ["Au", "Ag", "Cu", "Fe"],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Au"],
+    "removed": [],
     "answer": "Au"
   },
   {
     "question": "Who painted the Mona Lisa?",
-    "options": [
-      "Pablo Picasso",
-      "Vincent van Gogh",
-      "Leonardo da Vinci",
-      "Michelangelo"
-    ],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Leonardo da Vinci", "DaVinci"],
+    "removed": [],
     "answer": "Leonardo da Vinci"
   },
   {
     "question": "Which planet is known as the Red Planet?",
-    "options": ["Mars", "Venus", "Mercury", "Uranus"],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Mars"],
+    "removed": [],
     "answer": "Mars"
   },
   {
     "question": "What is the largest species of shark?",
-    "options": [
-      "Great White Shark",
-      "Whale Shark",
-      "Tiger Shark",
-      "Hammerhead Shark"
-    ],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Whale Shark", "Whale"],
+    "removed": [],
     "answer": "Whale Shark"
   },
   {
     "question": "Which animal is known as the King of the Jungle?",
-    "options": ["Lion", "Tiger", "Elephant", "Giraffe"],
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Lion"],
+    "removed": [],
     "answer": "Lion"
   }
 ]
+},{
+  "Name": "Swahili",
+  "Questions": [{
+    "question": "Tumaini",
+    "total": 0,
+    "correct": 0,
+    "STH": 1,
+    "options": ["Hope"],
+    "removed": [],
+    "answer": "Hope"
+  },
+  {
+    "question": "Bibi",
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Grandmother", "Oma"],
+    "removed": [],
+    "answer": "Grandmother"
+  },
+  {
+    "question": "Chama",
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Society"],
+    "removed": [],
+    "answer": "Society"
+  },
+  {
+    "question": "Lango",
+    "STH": 1,
+    "total": 0,
+    "correct": 0,
+    "options": ["Door"],
+    "removed": [],
+    "answer": "Door"
+  }
+  ]
 }
+]
