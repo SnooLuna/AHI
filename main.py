@@ -6,7 +6,6 @@ from random import randint, choices
 
 class Deck:
     def __init__(self, cards):
-        print(cards, '\n\n')
         self.questions = cards["Questions"]
         self.name = cards["Name"]
 
